@@ -93,7 +93,8 @@ one is fine for a single machine.
 - **Git** must be installed and on your `PATH`. Gitweaver runs your Git rather
   than shipping its own, which is what makes its behaviour match your terminal's
   — including your config, your hooks, and your credential helpers.
-- **macOS 10.15** or later, Apple silicon.
+- **macOS 11** (Big Sur) or later, Apple silicon. The binary is arm64 only and
+  records a minimum of 11.0; there is no Intel build.
 - **Windows 10** (1803) or later, 64-bit.
 
 ## Reporting a problem
