@@ -63,11 +63,11 @@ Get the latest build from the
 [**Releases**](https://github.com/codertapsu/gitweaver-release/releases/latest)
 page.
 
-| Platform    | File                                | Notes                          |
-| ----------- | ----------------------------------- | ------------------------------ |
-| **macOS**   | `Gitweaver_<version>_aarch64.dmg`   | Signed and notarized by Apple  |
-| **Windows** | `Gitweaver_<version>_x64-setup.exe` | Installer (NSIS)               |
-| **Windows** | `Gitweaver_<version>_x64_en-US.msi` | Same app, for deployment tools |
+| Platform    | File                                | Notes                                    |
+| ----------- | ----------------------------------- | ---------------------------------------- |
+| **macOS**   | `Gitweaver_<version>_universal.dmg` | Intel and Apple silicon, in one download |
+| **Windows** | `Gitweaver_<version>_x64-setup.exe` | Installer (NSIS)                         |
+| **Windows** | `Gitweaver_<version>_x64_en-US.msi` | Same app, for deployment tools           |
 
 ## Installation
 
@@ -76,8 +76,10 @@ page.
 1. Download and open the `.dmg`.
 2. Drag **Gitweaver** into your **Applications** folder, then launch it.
 
-The app is notarized by Apple, so it opens without a Gatekeeper warning and
-there is nothing else to install.
+One download covers both kinds of Mac — it is a universal binary, so an Intel
+Mac and an Apple silicon Mac run the same file, each at full native speed. The
+app is notarized by Apple, so it opens without a Gatekeeper warning, and there
+is nothing else to install.
 
 ### Windows
 
@@ -93,8 +95,10 @@ one is fine for a single machine.
 - **Git** must be installed and on your `PATH`. Gitweaver runs your Git rather
   than shipping its own, which is what makes its behaviour match your terminal's
   — including your config, your hooks, and your credential helpers.
-- **macOS 11** (Big Sur) or later, Apple silicon. The binary is arm64 only and
-  records a minimum of 11.0; there is no Intel build.
+- **macOS 11** (Big Sur) or later, on **Intel or Apple silicon**. Both slices
+  are built for 11.0. Keep Safari up to date on Big Sur and Monterey: the
+  interface uses CSS that arrived in Safari 16, and the version of WebKit an app
+  gets is the one the system has.
 - **Windows 10** (1803) or later, 64-bit.
 
 ## Reporting a problem
