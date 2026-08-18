@@ -56,6 +56,9 @@ never leaves your machine, and there is no account to make.
   anything is rewritten.
 - **Your own terminal, one click away**, already in the repository.
 - **Six themes**, light and dark and four more.
+- **Updates itself**, and only ever from the welcome screen — never while you
+  have a repository open. Every update is signed and verified before it is
+  installed.
 
 ## Download
 
