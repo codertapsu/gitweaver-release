@@ -32,6 +32,11 @@ never leaves your machine, and there is no account to make.
 
 ## Features
 
+- **A console, in the window.** Anything Gitweaver has no button for is one
+  command away: type it, see exactly what Git printed, and see the exit code.
+  Suggestions complete what you type in grey from what you last ran. It runs
+  `git` and nothing else — never a shell — so the punctuation in a commit
+  message is punctuation.
 - **See the conflict coming.** Gitweaver asks Git which files a merge _would_
   conflict on, before you start it — so you find out while you can still choose,
   not from the middle of a merge you did not want.
@@ -48,10 +53,20 @@ never leaves your machine, and there is no account to make.
 - **Signatures, answered honestly.** Verified, present-but-unproven, and broken
   are three different answers, and Gitweaver gives all three rather than
   flattening them into two.
+- **Untracked files are not a dead end.** Delete them from a plan that names
+  what goes, or add them to `.gitignore` from the row — with the exact pattern
+  shown before it is written, and Git asked afterwards whether it took.
+- **Remotes you can actually manage.** Add, rename, re-point and remove them,
+  with fetch and push URLs kept apart when they differ. Every branch is counted
+  against its own upstream, so the ones with unpushed work are visible at a
+  glance.
+- **Merge the way your project merges.** Fast-forward, always-a-merge-commit,
+  fast-forward-only, or squash — chosen rather than assumed. Reverting a merge
+  asks which side to undo.
 - **Worktrees, submodules, LFS, reflog, bisect, stash** — including the parts
   most clients leave out.
-- **Interactive rebase by dragging**, with the plan shown in the order Git will
-  apply it.
+- **Interactive rebase by dragging** — or with the keyboard — with the plan
+  shown in the order Git will apply it.
 - **Remove a secret from every commit**, with the cost spelled out before
   anything is rewritten.
 - **Your own terminal, one click away**, already in the repository.
