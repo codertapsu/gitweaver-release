@@ -40,11 +40,22 @@ never leaves your machine, and there is no account to make.
 - **See the conflict coming.** Gitweaver asks Git which files a merge _would_
   conflict on, before you start it — so you find out while you can still choose,
   not from the middle of a merge you did not want.
-- **Diffs that read like changes.** Side-by-side or inline, with moved blocks
-  marked as moved rather than reported as a deletion and an unrelated addition.
-  Images diff as images.
+- **Diffs that read like changes.** Side-by-side or inline, syntax-coloured, with
+  the changed _words_ picked out inside a changed line rather than leaving you two
+  long lines and a spot-the-difference puzzle. Moved blocks are marked as moved
+  rather than reported as a deletion and an unrelated addition. Images diff as
+  images.
+- **Take a change with you, or throw part of it away.** Copy any diff as a
+  patch, or save it as a `.patch` file. Discard a single hunk, or only the
+  lines you picked, and the rest of the file is left alone.
 - **Find a file by typing part of its name.** Fuzzy, ranked, over the whole
   repository at any revision.
+- **Find a string anywhere in the working tree.** Plain text or a regular
+  expression, grouped by file, and one click lands on the line. When there are
+  more matches than it will show, it says so rather than quietly stopping.
+- **Everything by name.** One keystroke opens a palette over the views, the sync
+  actions, your branches, and the settings — so nothing you can do is buried in a
+  menu you have to remember the shape of.
 - **History as a graph.** Every branch and merge drawn as lanes, built to stay
   smooth at a hundred thousand commits.
 - **Blame, line history, and file churn.** Who last touched each line; the
@@ -63,10 +74,26 @@ never leaves your machine, and there is no account to make.
 - **Merge the way your project merges.** Fast-forward, always-a-merge-commit,
   fast-forward-only, or squash — chosen rather than assumed. Reverting a merge
   asks which side to undo.
+- **A dirty tree does not stop a pull.** When local changes are in the way,
+  Gitweaver offers to stash them, run the pull or rebase, and put them back — as
+  one action, at the moment it matters, rather than as a checkbox you were
+  supposed to have found earlier.
+- **Look inside a stash before you apply it.** A stash is a commit, so it gets
+  the same diff view as anything else — applying one stops being an act of
+  memory.
+- **Put a single file back the way it was.** Browse any revision and restore one
+  file from it into your working tree, with what gets overwritten named first.
+- **Amending tells you the truth.** If the commit you are about to replace is
+  already pushed, you are told before you amend it — not by the push that fails
+  afterwards.
 - **Worktrees, submodules, LFS, reflog, bisect, stash** — including the parts
-  most clients leave out.
+  most clients leave out. Submodules can be added, removed and synced, not just
+  listed.
 - **Interactive rebase by dragging** — or with the keyboard — with the plan
-  shown in the order Git will apply it.
+  shown in the order Git will apply it. Slot in a command to run between
+  commits, so your tests decide whether the rebase carries on, or a pause to
+  look around. The plan is checked before Git starts rather than failing
+  halfway through it.
 - **Remove a secret from every commit**, with the cost spelled out before
   anything is rewritten.
 - **Your own terminal, one click away**, already in the repository.
