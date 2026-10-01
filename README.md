@@ -37,6 +37,12 @@ never leaves your machine, and there is no account to make.
   Suggestions complete what you type in grey from what you last ran. It runs
   `git` and nothing else — never a shell — so the punctuation in a commit
   message is punctuation.
+- **Catch up with a rewritten branch.** When somebody force-pushes a branch you
+  share, your copy is a version of history that no longer exists, and merging
+  would bring it back. Gitweaver offers to reset your branch onto the remote
+  one, and asks first what should happen to the work in your tree: stash it and
+  put it back, stash it and leave it, or throw it away. It tells you how many of
+  your own commits that leaves behind before you agree.
 - **See the conflict coming.** Gitweaver asks Git which files a merge _would_
   conflict on, before you start it — so you find out while you can still choose,
   not from the middle of a merge you did not want.
@@ -53,6 +59,11 @@ never leaves your machine, and there is no account to make.
 - **Find a string anywhere in the working tree.** Plain text or a regular
   expression, grouped by file, and one click lands on the line. When there are
   more matches than it will show, it says so rather than quietly stopping.
+- **The panes are yours.** Every split view drags — the file lists against the
+  diff, the commit list against the details, both sides of a comparison, the
+  three panes of a conflict. Each view remembers where you left it, and every
+  divider answers to arrow keys as well as the pointer.
+
 - **Everything by name.** One keystroke opens a palette over the views, the sync
   actions, your branches, and the settings — so nothing you can do is buried in a
   menu you have to remember the shape of.
@@ -65,8 +76,10 @@ never leaves your machine, and there is no account to make.
   are three different answers, and Gitweaver gives all three rather than
   flattening them into two.
 - **Untracked files are not a dead end.** Delete them from a plan that names
-  what goes, or add them to `.gitignore` from the row — with the exact pattern
-  shown before it is written, and Git asked afterwards whether it took.
+  what goes, or ignore them from the row — with the exact pattern shown before
+  it is written, and Git asked afterwards whether it took. Ignore for everyone
+  in `.gitignore`, or **just for yourself** in `.git/info/exclude`, so a
+  personal scratch file does not become a line the whole project carries.
 - **Remotes you can actually manage.** Add, rename, re-point and remove them,
   with fetch and push URLs kept apart when they differ. Every branch is counted
   against its own upstream, so the ones with unpushed work are visible at a
@@ -78,17 +91,26 @@ never leaves your machine, and there is no account to make.
   Gitweaver offers to stash them, run the pull or rebase, and put them back — as
   one action, at the moment it matters, rather than as a checkbox you were
   supposed to have found earlier.
-- **Look inside a stash before you apply it.** A stash is a commit, so it gets
-  the same diff view as anything else — applying one stops being an act of
-  memory.
+- **Look inside a stash before you apply it, and take only part of it.** A
+  stash is a commit, so it gets the same diff view as anything else — including
+  the files that were untracked when you made it, which most tools never show
+  you. Tick the files you want and apply just those; the rest stay in the
+  stash. Git itself cannot do that.
+
+- **Take another branch's changes without merging it.** What a branch _did_,
+  dropped into your working tree as uncommitted work to read and commit as your
+  own — no merge commit, no history joined. It says what it will touch before
+  it writes anything.
 - **Put a single file back the way it was.** Browse any revision and restore one
   file from it into your working tree, with what gets overwritten named first.
 - **Amending tells you the truth.** If the commit you are about to replace is
   already pushed, you are told before you amend it — not by the push that fails
   afterwards.
-- **Worktrees, submodules, LFS, reflog, bisect, stash** — including the parts
-  most clients leave out. Submodules can be added, removed and synced, not just
-  listed.
+- **Worktrees, submodules, reflog, bisect, stash** — including the parts most
+  clients leave out. Submodules can be added, removed and synced, not just
+  listed. **LFS is detected, not managed**: Gitweaver tells you when a
+  repository needs Git LFS and LFS is missing or broken, which is the failure
+  that otherwise names neither.
 - **Interactive rebase by dragging** — or with the keyboard — with the plan
   shown in the order Git will apply it. Slot in a command to run between
   commits, so your tests decide whether the rebase carries on, or a pause to
@@ -151,6 +173,13 @@ one is fine for a single machine.
 Open an issue on this repository. Every failure Gitweaver shows has a **See
 more** button with the exact command that ran and everything Git printed —
 pasting that in makes a report far easier to act on.
+
+If Gitweaver closed or stopped responding, there is a log. **Show logs** on the
+welcome screen opens the folder; the files are named by date and kept for a
+week. macOS keeps them in `~/Library/Logs/com.gitweaver.desktop/` and Windows
+under `%LOCALAPPDATA%\com.gitweaver.desktop\logs\`. Nothing is sent
+anywhere — attaching the file to an issue is the only way it leaves your
+machine.
 
 ## Source
 
